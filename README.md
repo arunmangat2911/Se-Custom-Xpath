@@ -19,8 +19,8 @@ public class CustomXpath {
 		
 		
 		
-		//driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get("https://www.ebay.com/");
 		
@@ -36,7 +36,14 @@ public class CustomXpath {
 		
 		//driver.findElement(By.xpath("//input[contains(@id,'gh-')]")).sendKeys("autonomoues");
 		
-		driver.findElement(By.xpath("//input[starts-with(@id,'gh-')]")).sendKeys("python");
+		//driver.findElement(By.xpath("//input[starts-with(@id,'gh-')]")).sendKeys("python");
+		
+		
+		//for links:
+		//all links are represented by <a> html tag.
+		driver.findElement(By.xpath("//a[contains(text(),'Sign in')]")).click();
+		
+		
 		
 		
 		
